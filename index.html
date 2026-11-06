@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en-IN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'self'; object-src 'none'"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>CFO Arena: corporate finance, played</title>
+    <meta
+      name="description"
+      content="Run the finances of Umiam Beverages Ltd for five years. Working capital, capital budgeting, capital structure and dividends, valued live with DCF and CAPM. Plus a toolkit of the course's calculators."
+    />
+    <meta name="theme-color" content="#0e5a5f" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0f1316" media="(prefers-color-scheme: dark)" />
+    <meta property="og:title" content="CFO Arena" />
+    <meta property="og:description" content="A corporate-finance simulation and toolkit for the FMFM course, IIM Shillong." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@500&family=IBM+Plex+Sans:wght@400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,500;0,8..60,600;1,8..60,500&display=swap"
+    />
+    <link rel="stylesheet" href="assets/css/app.css" />
+    <script type="module" src="src/app.js"></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="#/" aria-label="CFO Arena home">
+          <svg class="brand-mark" viewBox="0 0 64 64" aria-hidden="true">
+            <rect width="64" height="64" rx="12" fill="#0e5a5f" />
+            <path d="M14 44V20" stroke="#f5f2ea" stroke-width="4" stroke-linecap="round" />
+            <path d="M14 44h36" stroke="#f5f2ea" stroke-width="4" stroke-linecap="round" />
+            <path d="m20 36 8-8 6 5 12-13" fill="none" stroke="#e7b45c" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round" />
+          </svg>
+          <span>
+            <span class="brand-name">CFO Arena</span>
+            <span class="brand-sub">Umiam Beverages Ltd &middot; FMFM, IIM Shillong</span>
+          </span>
+        </a>
+        <nav class="top-nav" aria-label="Main">
+          <a href="#/play" data-nav="play">Play</a>
+          <a href="#/toolkit" data-nav="toolkit">Toolkit</a>
+          <a href="#/classroom" data-nav="classroom">Classroom</a>
+          <a href="#/learn" data-nav="learn">How it works</a>
+        </nav>
+        <button class="icon-btn" id="theme-toggle" type="button" aria-label="Colour theme: automatic">
+          <span id="theme-icon" aria-hidden="true"></span>
+        </button>
+      </div>
+    </header>
+
+    <main id="main" tabindex="-1">
+      <div class="container">
+        <noscript>
+          <div class="card">
+            <h1>CFO Arena needs JavaScript</h1>
+            <p>Please enable JavaScript to play the simulation and use the calculators.</p>
+          </div>
+        </noscript>
+        <div id="app" aria-live="off"></div>
+      </div>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container stack">
+        <p>
+          CFO Arena is a teaching simulation built for Financial Management and Financial Market (FMFM), IIM Shillong
+          PGP 2026-28. Umiam Beverages Ltd is fictional; game parameters are illustrative.
+          <a href="#/learn">How the model works</a>.
+        </p>
+        <p class="tiny">Market inputs: India 10-year G-sec yield (5 Nov 2026), Damodaran equity risk premium and rating spreads (January 2026). Not investment advice.</p>
+      </div>
+    </footer>
+
+    <nav class="tabbar" aria-label="Main">
+      <a href="#/" data-nav="home"><span data-icon="home"></span>Home</a>
+      <a href="#/play" data-nav="play"><span data-icon="play"></span>Play</a>
+      <a href="#/toolkit" data-nav="toolkit"><span data-icon="toolkit"></span>Toolkit</a>
+      <a href="#/classroom" data-nav="classroom"><span data-icon="classroom"></span>Class</a>
+      <a href="#/learn" data-nav="learn"><span data-icon="learn"></span>Learn</a>
+    </nav>
+
+    <div class="toast-region" id="toasts" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>
